@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rust-server
+  labels:
+    name: rust-server
+spec:
+  containers:
+    - resources:
+        limits:
+          cpu: 0.5
+      image: gcr.io/rusty-162617/rust-server
+      name: rust-server
+      env:
+        - name: PASSWORD
+          value: yourpassword
+      ports:
+        - containerPort: 28015
+          hostPort: 28015
+          protocol: UDP
+      volumeMounts:
+        - name: rust-server-storage
+          mountPath: /steamcmd/rust
+  volumes:
+    - name: rust-server-storage
+      gcePersistentDisk:
+        pdName: rust-server-disk
+        fsType: ext4
