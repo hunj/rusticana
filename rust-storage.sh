@@ -1,0 +1,1 @@
+gcloud compute disks create --size 200GB rust-server-disk
