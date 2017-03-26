@@ -1,2 +1,2 @@
-kubectrl delete -f rust-server.yaml
-kubectrl delete -f rust-service.yaml
+kubectl delete -f rust-server.yaml
+kubectl delete -f rust-service.yaml
