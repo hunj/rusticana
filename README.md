@@ -13,10 +13,42 @@ https://console.cloud.google.com/apis/dashboard?
 
 Once you have finished signing up, you'll need to go and enable [Google Container Engine APIs](https://console.cloud.google.com/apis/dashboard) for your account. 
 
-Watch the [video for more information](https://www.youtube.com/watch?v=zfDZJDXfhFQ&feature=youtu.be) on how to use the scripts. The basics start once you get into the console.
+Watch the [video for more information](https://www.youtube.com/watch?v=zfDZJDXfhFQ&feature=youtu.be) on setting up your account. The basics below start once you get into the console.
 
-You can check out this Gist to the Google console by doing the following:
+Once you are connected to the Google console do the following to start the server (don't copy and past the dollar signs):
 
 ```
-git clone 
+$ git clone https://gist.github.com/424102dfd6f348f3b8d64b33c52e17ba.git rust-server
+$ cd rust-server
+$ ./create-cluster.sh
+$ # wait a few minutes
+$ ./start-server.sh
+$ # wait about 10 minutes, then run this to get the IP:
+$ kubectrl get services
+NAME            CLUSTER-IP    EXTERNAL-IP      PORT(S)           AGE
+kubernetes      10.3.240.1    <none>           443/TCP           2h
+rust-frontend   10.3.252.69   104.198.23.205   28015:32632/UDP   2h
+```
 
+Use the EXTERNAL-IP of the frontend to build a string to connect to the server in the Rust client. Use F1 to bring up the console in Rust and type:
+
+```
+client.connect 104.198.23.205:28015
+```
+
+*Obviously, this is the IP address of my server in this example. Use your own in your own example!*
+
+To completely wipe the server from Google, including shutting down the container cluster controlers, the container running the game server AND deleting your server data, do the following: 
+
+```
+$ ./wipe-server.sh
+```
+
+To shut the server down, but keep the data intact and the cluster controllers running, do the following:
+
+```
+$ ./stop-server.sh
+```
+
+That's about it. Stay tuned for sharing of worlds.
+To restart 
