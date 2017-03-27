@@ -11,5 +11,12 @@ If you ever need to navigate back to Google Cloud, you'll use the following URL:
 https://console.cloud.google.com/apis/dashboard?
 ```
 
-Once you have finished signing up, you'll need to go and enable [Google Container Engine APIs](https://console.cloud.google.com/apis/dashboard) for your account. Watch the [video for more information](https://www.youtube.com/watch?v=zfDZJDXfhFQ&feature=youtu.be) on how to do this.
+Once you have finished signing up, you'll need to go and enable [Google Container Engine APIs](https://console.cloud.google.com/apis/dashboard) for your account. 
+
+Watch the [video for more information](https://www.youtube.com/watch?v=zfDZJDXfhFQ&feature=youtu.be) on how to use the scripts. The basics start once you get into the console.
+
+You can check out this Gist to the Google console by doing the following:
+
+```
+git clone 
 
