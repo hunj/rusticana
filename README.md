@@ -51,4 +51,3 @@ $ ./stop-server.sh
 ```
 
 That's about it. Stay tuned for sharing of worlds.
-To restart 
