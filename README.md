@@ -38,7 +38,7 @@ client.connect 104.198.23.205:28015
 
 *Obviously, this is the IP address of my server in this example. Use your own in your own example!*
 
-To completely wipe the server from Google, including shutting down the container cluster controlers, the container running the game server AND deleting your server data, do the following: 
+To completely wipe the server from Google, including shutting down the container cluster controllers, the container running the game server AND deleting your server data, do the following: 
 
 ```
 $ ./wipe-server.sh
