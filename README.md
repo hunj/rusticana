@@ -15,7 +15,7 @@ Once you have finished signing up, you'll need to go and enable [Google Containe
 
 Watch the [video for more information](https://www.youtube.com/watch?v=zfDZJDXfhFQ&feature=youtu.be) on setting up your account. The basics below start once you get into the console.
 
-Once you are connected to the Google console do the following to start the server (don't copy and past the dollar signs):
+Once you are connected to the Google console do the following to start the server (don't copy and paste the dollar signs):
 
 ```
 $ git clone https://gist.github.com/424102dfd6f348f3b8d64b33c52e17ba.git rust-server
