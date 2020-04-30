@@ -1,28 +1,52 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: rust-server
+  name: rusticana-server
   labels:
-    name: rust-server
+    app: rusticana
+
 spec:
   containers:
-    - resources:
-        limits:
-          cpu: 0.5
-      image: gcr.io/rusty-162617/rust-server
-      name: rust-server
+    - image: didstopia/rust-server:latest
+      name: rusticana-server
+      # resources:
+      #   limits:
+      #     memory: "6Gi"
+      #   requests:
+      #     cpu: "1000m"
+      #     memory: "4Gi"
       env:
-        - name: PASSWORD
-          value: yourpassword
+        - name: RUST_RCON_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: rusticana-secret
+              key: rustServerPassword
+        - name: RUST_SERVER_URL
+          value: "https://discord.gg/BJgdfeu"
+        - name: RUST_SERVER_WORLDSIZE
+          value: "2500"
+        - name: RUST_SERVER_SEED
+          value: "15"
+        - name: RUST_SERVER_BANNER_URL
+          value: "https://raw.githubusercontent.com/hunj/rusticana/master/img/header.png"
+        - name: RUST_SERVER_NAME
+          value: "Rusticana (BETA) SOLO ONLY PvE-heavy, bi-weekly map wipes"
+        - name: RUST_SERVER_DESCRIPTION
+          value: "BETA TESTING server; officially opening next monthly wipe. Planning to make it PvE heavy."
+        - name: RUST_SERVER_MAXPLAYERS
+          value: "10"
       ports:
         - containerPort: 28015
           hostPort: 28015
           protocol: UDP
+        - containerPort: 28016
+          hostPort: 28016
+          protocol: UDP
       volumeMounts:
-        - name: rust-server-storage
-          mountPath: /steamcmd/rust
+        - mountPath: /steamcmd/rust
+          name: rusticana-server-storage
   volumes:
-    - name: rust-server-storage
+    - name: rusticana-server-storage
       gcePersistentDisk:
-        pdName: rust-server-disk
+        pdName: rusticana-disk
         fsType: ext4

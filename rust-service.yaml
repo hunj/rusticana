@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    name: rust-frontend
-  name: rust-frontend
+    name: rusticana-frontend
+  name: rusticana-frontend
 spec:
   type: LoadBalancer
   ports:
@@ -11,4 +11,4 @@ spec:
       targetPort: 28015
       protocol: UDP
   selector:
-    name: rust-server
+    name: rusticana-server
