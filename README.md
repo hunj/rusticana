@@ -1,5 +1,7 @@
 # Rusticana
 
+![status](https://cdn.battlemetrics.com/b/horizontal500x80px/6793917.png?foreground=%23EEEEEE&background=%23222222&lines=%23333333&linkColor=%231185ec&chartColor=%23FF0700)
+
 **Rusticana** is a server name for my instance of dedicated server for [Facepunch Studio](https://rust.facepunch.com)'s game [Rust](https://rust.facepunch.com/), running on [steamcmd](https://developer.valvesoftware.com/wiki/SteamCMD).
 
 This is deployed on Google Cloud Platform, using Kubernetes Engine.
