@@ -1,6 +1,6 @@
 # Rusticana
 
-![status](https://cdn.battlemetrics.com/b/horizontal500x80px/6793917.png?foreground=%23EEEEEE&background=%23222222&lines=%23333333&linkColor=%231185ec&chartColor=%23FF0700)
+[![Banner for Rusticana! SOLO Only | Wiped @ 5/21 8PM EDT | Next wipe @ June](https://cdn.battlemetrics.com/b/standardVertical/6854678.png?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300)](https://www.battlemetrics.com/servers/rust/6854678)
 
 **Rusticana** is a server name for my instance of dedicated server for [Facepunch Studio](https://rust.facepunch.com)'s game [Rust](https://rust.facepunch.com/), running on [steamcmd](https://developer.valvesoftware.com/wiki/SteamCMD).
 
